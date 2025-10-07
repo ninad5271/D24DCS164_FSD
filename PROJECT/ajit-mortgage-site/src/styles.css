@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --accent: #0ea5e9;
+}
+
+html,body,#root{
+  height:100%;
+}
+
+body{
+  font-family: theme('fontFamily.sans');
+  background: linear-gradient(180deg,#f8fbff 0%, #ffffff 60%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.card{ background:white; border-radius:12px; box-shadow:var(--tw-shadow, 0 8px 30px rgba(2,6,23,0.06)); }
+
+.glass{
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.6));
+  backdrop-filter: blur(8px);
+}
+
+/* Dark mode overrides */
+.dark body{
+  background: linear-gradient(180deg,#071024 0%, #071724 60%);
+  color: #e6eef6;
+}
+.dark .card{ background:#06202b; box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
+.dark .glass{ background: linear-gradient(180deg, rgba(6,32,43,0.6), rgba(6,32,43,0.5)); }
+.dark a.text-ajit { color: #7dd3fc; }
+.dark .text-slate-600 { color: #9fb7c8; }
+.dark .text-slate-700 { color: #cfe8f6; }
+
